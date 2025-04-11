@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 export default function ChildEducation() {
+    const navigate = useNavigate();
+  
   return (
     <>
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
@@ -24,7 +27,11 @@ export default function ChildEducation() {
                 lasting change in the lives of underprivileged children.
               </p>
               <div className="flex space-x-4 mt-8">
-                <button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 px-8 py-3 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <button
+                  className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 px-8 py-3 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg"
+                  nav
+                  onClick={() => navigate("/donate")}
+                >
                   Donate Now
                 </button>
                 <button className="bg-white/20 hover:bg-white/30 px-8 py-3 rounded-full font-semibold backdrop-blur-sm transform hover:scale-105 transition-all duration-300">
@@ -241,7 +248,10 @@ export default function ChildEducation() {
               opportunities for underprivileged children.
             </p>
             <div className="flex justify-center space-x-4">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
+              <button
+                className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
+                onClick={() => navigate("/donate")}
+              >
                 Donate Now
               </button>
               <button className="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transform hover:scale-105 transition-all duration-300">
