@@ -37,7 +37,7 @@ const [formData, setFormData] = useState({
 
 
     try {
-      await axios.post("http://localhost:3000/api/jobroute/job/post", data);
+      await axios.post("https://ngo-backend-ham7.onrender.com/api/jobroute/job/post", data);
       alert("Application submitted successfully!");
       setFormData({
         name: "",
@@ -60,7 +60,7 @@ const [formData, setFormData] = useState({
 
     useEffect(() => {
       axios
-        .get("http://localhost:3000/api/jobDescriptionroute/jobDescription/get") // adjust your URL as needed
+        .get("https://ngo-backend-ham7.onrender.com/api/jobDescriptionroute/jobDescription/get") // adjust your URL as needed
         .then((res) => {
           console.log("res get are:",res)
           setJobs(res.data.data)})
